@@ -3,7 +3,7 @@ function getRandomChines(length) {
     let letters = Date.now().toString().slice(-5);
     let randomChines = [];
     for(let i = 0; i < length; i++) {
-      letters += 1;
+      letters += i;
       randomChines.push(String.fromCharCode(letters));
     }
     setTimeout(() => resolve(randomChines.join("")), length * 50)
